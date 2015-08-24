@@ -10,12 +10,17 @@ module QingCloudServer
   module Client
 
     class ServiceFoudation
+      attr_accessor :response
       def initialize(connector)
         @connector = connector
       end
 
       def fetch_response(action, params)
-        @connector.fetch_server_condation(action, params)
+        params.each do |k, v|
+          params.delete(k) unless (v.is_a?(Numeric)) || (v && v.length > 0)
+        end
+
+        self.response = @connector.fetch_server_condition(action, params)
       end
 
       def convert_arr_to_hash(arr)

@@ -3,10 +3,10 @@ module QingCloudServer
     class Service < ServiceFoudation
 
       def describe_instances(
-            instances_N:,
-            image_id: nil,
-            instance_type: nil,
-            status: nil,
+            instances_N: [],
+            image_id_N: [],
+            instance_type: [],
+            status_N: [],
             search_word: nil,
             verbose: nil,
             offset: nil,
