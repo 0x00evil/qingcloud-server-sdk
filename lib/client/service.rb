@@ -36,6 +36,48 @@ module QingCloudServer
             user_data_file: nil,
             zone:)eval(make_action_and_params)
       end
+
+      def terminate_instances(
+            instances_N:,
+            zone:
+          )eval(make_action_and_params)
+      end
+
+      def start_instances(
+            instances_N:,
+            zone:
+          )eval(make_action_and_params)
+      end
+
+      def stop_instances(
+            instances_N:,
+            force: nil,
+            zone:
+          )eval(make_action_and_params)
+      end
+
+      def restart_instances(
+            instances_N:,
+            zone:
+          )eval(make_action_and_params)
+      end
+
+      def resize_instances(
+            instances_N:,
+            instance_type: nil,
+            cpu: nil,
+            memory: nil,
+            zone:
+          )eval(make_action_and_params)
+      end
+
+      def modify_instance_attributes(
+            instance:,
+            instance_name: nil,
+            description: nil,
+            zone:
+          )eval(make_action_and_params)
+      end
     end
   end
 end
