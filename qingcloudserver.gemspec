@@ -1,9 +1,7 @@
 lib = File.expand_path("../lib", __FILE__)
-puts lib
 
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-puts __FILE__
 require 'version'
 Gem::Specification.new do |spec|
   spec.name = "qingcloudserver"
