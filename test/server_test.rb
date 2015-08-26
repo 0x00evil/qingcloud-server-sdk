@@ -28,4 +28,11 @@ service = QingCloudServer::Client::Service.new(connector)
 # service.start_instances(instances_N: ["i-j7rdjua9"], zone: "pek2")
 # puts service.response
 
-service.modify_instance_attributes(instance: "i-j7rdjua9", instance_name: "centos_test_yuehua", zone: "pek2")
+# service.modify_instance_attributes(instance: "i-j7rdjua9", instance_name: "centos_test_yuehua", zone: "pek2")
+
+# service.get_monitor(resource: "i-j7rdjua9", meters_N: ["cpu", "memory"], step: "5m", start_time: "2015-08-26T00:00:00Z", end_time: "2015-08-26T00:12:00Z", zone: "pek2")
+
+# puts service.response
+
+service.describe_jobs(zone: "pek2")
+puts service.response

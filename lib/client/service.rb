@@ -78,6 +78,30 @@ module QingCloudServer
             zone:
           )eval(make_action_and_params)
       end
+
+      # monitor
+      def get_monitor(
+            resource:,
+            meters_N:,
+            step:,
+            start_time:,
+            end_time:,
+            zone:
+          )eval(make_action_and_params)
+      end
+
+      # describe jobs
+      def describe_jobs(
+            jobs_N: nil,
+            status_N: nil,
+            job_action: nil,
+            verbose: nil,
+            offset: nil,
+            limit: nil,
+            zone:
+          )eval(make_action_and_params)
+      end
+
     end
   end
 end
