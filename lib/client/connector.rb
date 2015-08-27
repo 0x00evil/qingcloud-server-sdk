@@ -20,8 +20,12 @@ module QingCloudServer
         Connector.new(public_key, secret_key)
       end
 
+      def self.init_with_config
+        config_hash_file = Utility.read_config_file
+        Connector.new(config_hash_file["public_key"], config_hash_file["private_key"])
+      end
+
       def fetch_server_condition(action, params)
-#        request_url = APIAddress + "&action=#{action}"
 
         params.update(
                       :action => action,

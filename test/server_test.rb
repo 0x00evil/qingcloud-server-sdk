@@ -1,6 +1,6 @@
 require 'qingcloud_server'
 
-connector = QingCloudServer::Client::Connector.init("NULYIYWTTUXRAGENKRQM", "SKw7I862utQqhH98jTsKaxyWMybe2jrY0cF8EgE0")
+connector = QingCloudServer::Client::Connector.init_with_config
 service = QingCloudServer::Client::Service.new(connector)
 
 # tj = status_N: ["running"]
